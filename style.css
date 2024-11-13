@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url("assets/bgstart.jpg") no-repeat center center fixed;
+    background-size: cover;
+    flex-direction: column;
+}
+
+#container {
+    width: 70%; 
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(31, 31, 31, 0.4);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    display: none;
+}
+
+h1 {
+    color: rgb(233, 233, 233);
+}
+
+.players {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+
+.player1, .player2, #player1Choice, #player2Choice, #winner {
+    color: #ffffff;
+}
+
+
+#player1Choice, #player2Choice {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+#winner {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(235, 153, 0);
+}
+
+.players img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20%;
+}
+
+button {
+    display: block;
+    margin: 5px auto;
+    padding: 0.5rem 1rem;
+    background-color: rgb(0, 60, 99);
+    color: white;
+    border-radius: 0.1rem;
+    cursor: pointer;
+}
+
+.start-btn {
+    margin-bottom: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+    background: linear-gradient(45deg, #ffcc00, #ff6b6b);
+    transform: scale(1.1);
+}
+
+#victory {
+    width: 100px;
+    display: block;
+    margin: 10px auto;
+}
+
+span {
+    color: red;
+    background-color: black;
+    border-radius: 20px;
+    padding: 4px 10px;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+    #container {
+        width: 90%;
+        height: 80vh;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .players {
+        flex-direction: column;
+    }
+
+    .players img {
+        height: 80px;
+        width: 80px;
+        margin-top: 10px;
+    }
+
+    #player1Choice, #player2Choice {
+        font-size: 0.9rem; 
+    }
+
+    #winner {
+        font-size: 1.2rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem; 
+    }
+
+    .start-btn {
+        padding: 10px 20px; 
+        font-size: 16px; 
+    }
+
+    span {
+        font-size: 0.8rem; 
+    }
+}
